@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Authentication</title>
+</head>
+<body>
+  <h1>Authentication</h1>
+  <form id="login-form">
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <button type="submit">Login</button>
+  </form>
+  <script>
+    const loginForm = document.getElementById('login-form');
+    loginForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Get the username and password from the form.
+      const username = loginForm.username.value;
+      const password = loginForm.password.value;
+
+      // Validate the username and password.
+      if (username === '' || password === '') {
+        // Display an error message.
+        alert('Please enter a username and password.');
+        return;
+      }
+
+      // Send the username and password to the server for authentication.
+      // This can be done using a variety of methods, such as a POST request to a REST API.
+      // For simplicity, in this example, we will just simulate a successful authentication.
+
+      // Simulate a successful authentication.
+      alert('Authentication successful!');
+
+      // Redirect the user to the main page.
+      window.location.href = './main.html';
+    });
+  </script>
+</body>
+</html>
